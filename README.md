@@ -33,6 +33,17 @@ Additional frameworks, libraries, and application technologies will be documente
 * Git
 * Visual Studio Code
 
+### Set up the repository
+
+Clone the repository from its GitHub page, then change into the cloned directory:
+
+```bash
+git clone <repository-url>
+cd <repository-directory>
+```
+
+Replace the placeholders with the repository URL and directory name shown on GitHub.
+
 ### Verify your installation
 
 Run these commands in your terminal:
@@ -42,6 +53,8 @@ node --version
 npm --version
 git --version
 ```
+
+This repository is currently in the setup phase and does not yet define application dependencies or npm scripts. There is no `npm install` or application start command at this stage; those instructions will be added when the project stack and application requirements are established.
 
 ## Development Workflow
 
