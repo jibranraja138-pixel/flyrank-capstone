@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f8fc" />
+    <title>Settings · Studyspace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Main navigation">
+        <a class="brand" href="#" aria-label="Studyspace home"><span class="brand-mark">s</span><span>studyspace<span class="brand-dot">.</span></span></a>
+        <div class="workspace-label">WORKSPACE</div>
+        <nav class="main-nav">
+          <a href="#overview"><span class="nav-icon">◫</span>Overview</a>
+          <a href="#tasks"><span class="nav-icon">☷</span>My tasks<span class="nav-count">4</span></a>
+          <a href="#planner"><span class="nav-icon">▦</span>Planner</a>
+          <a href="#notes"><span class="nav-icon">▤</span>Notes</a>
+          <a href="#focus"><span class="nav-icon">◷</span>Focus sessions</a>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="help-card"><span class="help-icon">✳</span><strong>Need a little help?</strong><p>Make the most of your study time.</p><a href="#help">Visit the help center <span>↗</span></a></div>
+          <button class="profile-mini" type="button"><span class="avatar avatar-small">JD</span><span class="profile-copy"><strong>Jamie Davis</strong><small>Free plan</small></span><span class="more">···</span></button>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar"><div class="breadcrumb">Workspace <span>/</span> <strong>Settings</strong></div><div class="topbar-actions"><button class="icon-button" aria-label="Search">⌕</button><button class="icon-button notification" aria-label="Notifications">♧<i></i></button><span class="avatar">JD</span></div></header>
+        <div class="page-wrap">
+          <div class="page-heading"><div><div class="eyebrow">YOUR SPACE, YOUR WAY</div><h1>Settings</h1><p class="subtitle">Manage your account and make Studyspace work for you.</p></div><div class="heading-art" aria-hidden="true"><span>✳</span><i></i><b></b></div></div>
+          <div class="settings-layout">
+            <nav class="settings-nav" aria-label="Settings sections"><div class="settings-nav-label">PREFERENCES</div><a class="active" href="#profile"><span>♙</span>Profile</a><a href="#preferences"><span>⚙</span>Preferences</a><a href="#notifications"><span>♧</span>Notifications</a><div class="settings-divider"></div><div class="settings-nav-label">ACCOUNT</div><a href="#security"><span>♢</span>Login & security</a><a href="#plan"><span>▱</span>Plan & billing</a></nav>
+            <form class="settings-form" id="settings-form">
+              <section class="settings-card" id="profile">
+                <div class="card-heading"><div><h2>Profile</h2><p>Your personal details and how others see you.</p></div><span class="section-icon purple">♙</span></div>
+                <div class="avatar-row"><div class="avatar avatar-large" id="profile-avatar">JD</div><div class="avatar-actions"><strong>Your profile photo</strong><span>Make your workspace feel like yours.</span><div class="avatar-buttons"><button class="button button-outline" id="upload-button" type="button">Upload photo</button><button class="text-button" id="remove-photo" type="button">Remove</button><input id="photo-input" type="file" accept="image/*" hidden /></div></div></div>
+                <div class="field-grid"><label class="field"><span>First name</span><input name="firstName" value="Jamie" autocomplete="given-name" /></label><label class="field"><span>Last name</span><input name="lastName" value="Davis" autocomplete="family-name" /></label></div>
+                <label class="field full-field"><span>Email address</span><input type="email" name="email" value="jamie.davis@university.edu" autocomplete="email" /><small>This is the email you use to sign in.</small></label>
+                <div class="field-grid"><label class="field"><span>School or university <em>Optional</em></span><input name="school" placeholder="e.g. University of California" value="University of California" /></label><label class="field"><span>Field of study <em>Optional</em></span><select name="fieldOfStudy"><option>Choose your field</option><option selected>Computer Science</option><option>Business</option><option>Arts & Humanities</option><option>Sciences</option><option>Other</option></select></label></div>
+                <label class="field full-field"><span>About me <em>Optional</em></span><textarea name="bio" maxlength="160" rows="3" placeholder="A little about yourself...">Computer science student who loves a good study playlist.</textarea><small>Let your classmates know a little about you. <span id="char-count">63 / 160</span></small></label>
+              </section>
+
+              <section class="settings-card" id="preferences">
+                <div class="card-heading"><div><h2>Study preferences</h2><p>Set up your study space to fit your routine.</p></div><span class="section-icon coral">✳</span></div>
+                <div class="field-grid"><label class="field"><span>Daily study goal</span><div class="input-suffix"><input type="number" name="dailyGoal" min="1" max="16" value="4" /><span>hours / day</span></div></label><label class="field"><span>Focus session length</span><div class="input-suffix"><select name="focusLength"><option>25</option><option selected>50</option><option>60</option><option>90</option></select><span>minutes</span></div></label></div>
+                <label class="field full-field"><span>Week starts on</span><select name="weekStarts"><option>Sunday</option><option selected>Monday</option></select></label>
+              </section>
+
+              <section class="settings-card" id="notifications">
+                <div class="card-heading"><div><h2>Notifications</h2><p>Choose what you’d like to hear from us about.</p></div><span class="section-icon yellow">♧</span></div>
+                <div class="toggle-row"><div><strong>Study reminders</strong><span>A gentle nudge to keep your daily goal on track.</span></div><label class="switch"><input type="checkbox" name="studyReminders" checked /><span class="slider"></span><span class="sr-only">Study reminders</span></label></div>
+                <div class="toggle-row"><div><strong>Task due dates</strong><span>Get a heads-up before an assignment is due.</span></div><label class="switch"><input type="checkbox" name="dueDateReminders" checked /><span class="slider"></span><span class="sr-only">Task due dates</span></label></div>
+                <div class="toggle-row"><div><strong>Weekly progress recap</strong><span>A Sunday summary of your study streak and wins.</span></div><label class="switch"><input type="checkbox" name="weeklyRecap" /><span class="slider"></span><span class="sr-only">Weekly progress recap</span></label></div>
+              </section>
+              <div class="form-footer"><span class="save-status" id="save-status" aria-live="polite">Your changes are saved automatically when you save.</span><div><button type="reset" class="button button-quiet">Cancel</button><button type="submit" class="button button-primary"><span>Save changes</span><span>→</span></button></div></div>
+            </form>
+          </div>
+          <footer class="page-footer"><span>© 2024 Studyspace</span><a href="#privacy">Privacy</a><a href="#terms">Terms</a><a href="#support">Support</a><span class="footer-right">Made for your next big thing <span>✳</span></span></footer>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
