@@ -1,0 +1,8 @@
+{
+  "name": "student-productivity-settings",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  }
+}
